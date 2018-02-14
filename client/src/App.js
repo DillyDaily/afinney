@@ -25,11 +25,11 @@ class App extends Component {
             <Switch>
               {/* USERS */}
               <Route exact path="/" component={ AllProjects }/>
-              <Route exact path="/about" component={ AboutMe }/>
+              {/* <Route exact path="/about" component={ AboutMe }/> */}
               {/* ADIMIN */}
-              <Route exact path="/admin" component={ Login }/>
+              {/* <Route exact path="/admin" component={ Login }/>
               <Route exact path="/admin/projects" component={ AdminAllProjects }/>
-              <Route exact path="/admin/projects/:id" component={ AdminOneProject }/>
+              <Route exact path="/admin/projects/:id" component={ AdminOneProject }/> */}
             </Switch>
           </div>
         </Router>
