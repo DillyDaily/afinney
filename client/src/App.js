@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import AllProjects from './components/user/AllProjects';
-import AboutMe from './components/user/AboutMe';
+import OneProject from './components/user/OneProject';
+import Contact from './components/user/Contact';
 import Login from './components/admin/Login';
 import AdminAllProjects from './components/admin/AdminAllProjects';
 import AdminOneProject from './components/admin/AdminOneProject';
@@ -25,7 +26,8 @@ class App extends Component {
             <Switch>
               {/* USERS */}
               <Route exact path="/" component={ AllProjects }/>
-              {/* <Route exact path="/about" component={ AboutMe }/> */}
+              <Route exact path="/projects/:id" component={ OneProject }/>
+              <Route exact path="/contact" component={ Contact }/>
               {/* ADIMIN */}
               {/* <Route exact path="/admin" component={ Login }/>
               <Route exact path="/admin/projects" component={ AdminAllProjects }/>
