@@ -1,6 +1,8 @@
-import React from 'react'
+import React from 'react';
+import { connect } from 'react-redux';
 
 const OneProject = (props) => {
+  console.log('props from One Project ', props)
     let { title, description, technologies, image, url } = props.project
   return (
     <div>
@@ -11,4 +13,10 @@ const OneProject = (props) => {
   )
 }
 
-export default OneProject
+function mapStateToProps(state, props) {
+  return {
+    projects: state.projects
+  }
+}
+
+export default connect(mapStateToProps, null) (OneProject)

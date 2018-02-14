@@ -10,11 +10,11 @@ import AdminOneProject from './components/admin/AdminOneProject';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-// import { getPosts } from './actions/posts.actions';
+import { getProjects } from './actions/projects.actions';
 
 class App extends Component {
   componentDidMount() {
-    // this.props.getPosts()
+    this.props.getProjects()
   }
 
   render() {
@@ -44,7 +44,7 @@ class App extends Component {
 
 function mapDispatchToProps(dispatch) {
   return {
-    // getMessages: bindActionCreators(getMessages, dispatch)
+    getProjects: bindActionCreators(getProjects, dispatch)
   }
 }
 

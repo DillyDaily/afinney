@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
 import { reducer as formReducer } from 'redux-form';
-// import searchBar from './search.reducers';
+import projects from './projects.reducers';
 
 const rootReducer = combineReducers({ 
     form: formReducer,
-    // searchBar
+    projects
 });
 
 export default rootReducer;
