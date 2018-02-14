@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
-// import Admin from './components/Admin';
+import AllProjects from './components/user/AllProjects';
+import AboutMe from './components/user/AboutMe';
+import Login from './components/admin/Login';
+import AdminAllProjects from './components/admin/AdminAllProjects';
+import AdminOneProject from './components/admin/AdminOneProject';
 
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
@@ -20,14 +24,12 @@ class App extends Component {
           <div>
             <Switch>
               {/* USERS */}
-              <Route exact path="/" component={ Projects }/>
+              <Route exact path="/" component={ AllProjects }/>
               <Route exact path="/about" component={ AboutMe }/>
               {/* ADIMIN */}
-              <Route exact path="/admin" component={ Admin }/>
-              <Route exact path="/admin/messages" component={ Messages }/>
-              <Route exact path="/admin/blog" component={ AdminAllPosts }/>
-              <Route exact path="/admin/blog/new" component={ AddPost }/>
-              <Route exact path="/admin/blog/edit/:id" component={ EditPost }/>
+              <Route exact path="/admin" component={ Login }/>
+              <Route exact path="/admin/projects" component={ AdminAllProjects }/>
+              <Route exact path="/admin/projects/:id" component={ AdminOneProject }/>
             </Switch>
           </div>
         </Router>
