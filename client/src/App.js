@@ -1,21 +1,48 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+// import Admin from './components/Admin';
+
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+// import { getPosts } from './actions/posts.actions';
 
 class App extends Component {
+  componentDidMount() {
+    // this.props.getPosts()
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div className="App"> 
+       
+        <Router>
+          <div>
+            <Switch>
+              {/* USERS */}
+              <Route exact path="/" component={ Projects }/>
+              <Route exact path="/about" component={ AboutMe }/>
+              {/* ADIMIN */}
+              <Route exact path="/admin" component={ Admin }/>
+              <Route exact path="/admin/messages" component={ Messages }/>
+              <Route exact path="/admin/blog" component={ AdminAllPosts }/>
+              <Route exact path="/admin/blog/new" component={ AddPost }/>
+              <Route exact path="/admin/blog/edit/:id" component={ EditPost }/>
+            </Switch>
+          </div>
+        </Router>
+
+
       </div>
     );
   }
 }
 
-export default App;
+function mapDispatchToProps(dispatch) {
+  return {
+    // getMessages: bindActionCreators(getMessages, dispatch)
+  }
+}
+
+export default connect(null, mapDispatchToProps)(App);
+
