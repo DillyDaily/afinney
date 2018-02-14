@@ -13,6 +13,7 @@ module.exports = {
     
     getOne: function(req, res) {
         knex('projects')
+            .select()
             .where('id', req.params.id)
             .then(project => res.json(project))
     },
