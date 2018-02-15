@@ -9,6 +9,11 @@ class AllProjects extends Component {
     return (
       <div>
       <h1>ALL Projects</h1>
+      <h1>Title: </h1>
+        <div>Description: {} </div>
+        <div>Technologies: </div>
+        <div>image: </div>
+        <div>url: </div>
 
       </div>
     )

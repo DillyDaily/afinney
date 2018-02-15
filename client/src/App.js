@@ -26,7 +26,7 @@ class App extends Component {
             <Switch>
               {/* USERS */}
               <Route exact path="/projects" component={ AllProjects }/>
-              <Route exact path="/project/:id" component={ OneProject }/>
+              {/* <Route exact path="/project/:id" component={ OneProject }/> */}
               <Route exact path="/contact" component={ Contact }/>
               {/* ADIMIN */}
               {/* <Route exact path="/admin" component={ Login }/>
