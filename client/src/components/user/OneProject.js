@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 const OneProject = (props) => {
+  console.log("PROPS from OnePROJECT: ", props.projects)
   let { title, description, technologies, image, url } = props.project
   return (
     <div>

@@ -14,8 +14,9 @@ module.exports = {
     
     getOne: function(req, res) {
         knex('projects')
-            .select()
             .where('id', req.params.id)
-            .then(project => res.json(project))
+            .then((project) => {
+              project[0] ? res.send(project) : res.send({error: 'project not found'});
+            })
     },
 }
