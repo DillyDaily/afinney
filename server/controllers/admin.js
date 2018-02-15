@@ -11,11 +11,11 @@ module.exports = {
           .then(project => res.json(project))
     },
     
-    // getOne: function(req, res) {
-    //     knex('projects')
-    //         .where('id', req.params.id)
-    //         .then(project => res.json(project))
-    // },
+    getOne: function(req, res) {
+        knex('projects')
+            .where('id', req.params.id)
+            .then(project => res.json(project))
+    },
 
     createOne: function(req, res) {
         kenx('projects').insert(req.body).then(() => {
