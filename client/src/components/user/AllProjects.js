@@ -4,7 +4,7 @@ import OneProject from './OneProject';
 class AllProjects extends Component {
   render () {
     let theProjects = this.props.projects 
-    .map(project => <OneProject key={project.id} project={project} />)
+    // .map(project => <OneProject key={project.id} project={project} />)
 
     return (
       <div>

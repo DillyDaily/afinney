@@ -6,14 +6,14 @@ const admin = require("../controllers/admin.js");
 //User routes
 router.get('/', users.redirect);
 router.get('/projects', users.getAll);
-router.get('/projects/:id', users.getOne);
+router.get('/project/:id', users.getOne);
 
 //Admin routes
 router.get('/admin', admin.redirect);
 router.get('/admin/projects', admin.getAll);
-router.get('/admin/projects/:id', admin.getOne);
+router.get('/admin/project/:id', admin.getOne);
 router.post('/admin/projects', admin.createOne);
-router.patch('/admin/projects/:id', admin.updateOne);
-router.delete('/admin/projects/:id', admin.deleteOne);
+router.patch('/admin/project/:id', admin.updateOne);
+router.delete('/admin/project/:id', admin.deleteOne);
 
 module.exports = router;
